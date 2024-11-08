@@ -1,0 +1,15 @@
+import matplotlib.pyplot as plt
+
+# Assuming `model.history.history` is a dictionary containing your training history
+history = model.history.history
+
+# Plot each metric in the training history
+for metric in history.keys():
+    plt.plot(history[metric], label=metric)
+
+# Adding labels and title
+plt.xlabel('Epochs')
+plt.ylabel('Value')
+plt.title('Model Training History')
+plt.legend()
+plt.show()
